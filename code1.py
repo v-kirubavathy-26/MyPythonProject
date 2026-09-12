@@ -3,9 +3,13 @@ num = int(input("Enter a number: "))
 if num <= 1:
     print("Not a prime number")
 else:
-    for i in range(2, num):
+    count = 0
+
+    for i in range(1, num + 1):
         if num % i == 0:
-            print("Not a prime number")
-            break
-    else:
+            count += 1
+
+    if count == 2:
         print("Prime number")
+    else:
+        print("Not a prime number")
